@@ -21,7 +21,8 @@ const allowedOrigins = [
     "http://localhost:3000",
     "http://192.168.220.174:3000",
     "capacitor://localhost",
-    "https://localhost"
+    "https://localhost",
+    "https://notetinz.onrender.com"
 ]
 
 app.use(
