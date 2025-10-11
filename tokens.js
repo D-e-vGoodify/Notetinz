@@ -30,7 +30,8 @@ const createRefreshToken = userId => {
         httpOnly: true,
         sameSite: 'None',
         secure: true,
-        path: '/refresh_token'
+        path: '/refresh_token',
+        maxAge: 7 * 24 * 60 * 60 * 1000
     })
  }
 
