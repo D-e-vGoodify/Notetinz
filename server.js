@@ -37,7 +37,7 @@ app.use(
 const mongoose = require('mongoose');
 const User = require('./model/user');
 
-const uri = "mongodb+srv://agoodness922:goodify1%40mongodb@cluster0.kw3ldk7.mongodb.net/Notetinz?retryWrites=true&w=majority&appName=Cluster0" //'mongodb://127.0.0.1:27017/Notetinz'
+const uri = process.env.MONGODB_URI;
 
 async function connect() {
     try {
