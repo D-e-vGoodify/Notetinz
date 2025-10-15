@@ -4,7 +4,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const User = require('../model/user')
 
-const uri = "mongodb+srv://agoodness922:goodify1%40mongodb@cluster0.kw3ldk7.mongodb.net/Notetinz?retryWrites=true&w=majority&appName=Cluster0"
+const uri = process.env.MONGODB_URI;
 
 async function connect() {
     try {
@@ -16,13 +16,6 @@ async function connect() {
 }
 
 connect();
-/*const { MongoClient } = require('mongodb');
-
-const uri = "mongodb://127.0.0.1:27017/";
-const client = new MongoClient(uri);
-const db = client.db('Notetinz');
-const collection = db.collection('users')
-*/
 
 router.post("/updateNotes", async (req, res) => {
     const { encryptUsername, notes } = req.body
